@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate CSS</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .hidden {
+            display: none;
+            margin-top: 10px;
+        }
+
+        img {
+            max-width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="animate__animated animate__fadeInDown">Welcome to Development</h1>
+    <p class="animate__animated animate__fadeInLeft">This is a sample HTML file with various elements.</p>
+    <button id="showImage" class="animate__animated animate__bounceIn">Click Me</button> <br>
+    <img id="myImage" class="hidden animate__animated animate__fadeIn" src="/animate css/ganesha.avif" alt="Sample Image">
+    
+    <script>
+        document.getElementById('showImage').addEventListener('click', function() {
+            var image = document.getElementById('myImage');
+            image.classList.remove('hidden');
+            image.classList.add('animate__animated', 'animate__fadeIn');
+        });
+    </script>
+</body>
+</html>
